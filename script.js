@@ -105,6 +105,7 @@ function insertItems(typeArray, list) {
     let createImg = document.createElement('img')
     createImg.className = "item_figure"
     createImg.src = typeArray[i].image
+    createImg.alt = `imagem de ${typeArray[i].name}`
     createfigure.appendChild(createImg)
 
     let createDiv = document.createElement('div')
