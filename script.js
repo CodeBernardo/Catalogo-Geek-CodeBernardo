@@ -98,29 +98,29 @@ function insertItems(typeArray, list) {
     createLi.className = 'item'
     list.appendChild(createLi)
 
-    let createfigure = document.createElement('figure')
-    createfigure.className = "item_img_container"
-    createLi.appendChild(createfigure)
+    let createDivCards = document.createElement('div')
+    createDivCards.className = "item_img_container"
+    createLi.appendChild(createDivCards)
 
     let createImg = document.createElement('img')
     createImg.className = "item_figure"
     createImg.src = typeArray[i].image
     createImg.alt = `imagem de ${typeArray[i].name}`
-    createfigure.appendChild(createImg)
+    createDivCards.appendChild(createImg)
 
-    let createDiv = document.createElement('div')
-    createDiv.className = "products_info"
-    createfigure.appendChild(createDiv)
+    let createDivInfo = document.createElement('div')
+    createDivInfo.className = "products_info"
+    createDivCards.appendChild(createDivInfo)
 
-    let createFigcaption = document.createElement('figcaption')
-    createFigcaption.className = 'item_name"'
-    createFigcaption.innerText = typeArray[i].name
-    createDiv.appendChild(createFigcaption)
+    let createItemName = document.createElement('p')
+    createItemName.className = 'item_name"'
+    createItemName.innerText = typeArray[i].name
+    createDivInfo.appendChild(createItemName)
 
-    let createParagraph = document.createElement('p')
-    createParagraph.className = "item_price"
-    createParagraph.innerText = typeArray[i].price
-    createDiv.appendChild(createParagraph)
+    let createItemPrice = document.createElement('p')
+    createItemPrice.className = "item_price"
+    createItemPrice.innerText = typeArray[i].price
+    createDivInfo.appendChild(createItemPrice)
   }
 }
 
